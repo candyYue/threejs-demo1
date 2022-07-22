@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <Scene :eventList="eventList"></Scene> -->
+    <ParkScene></ParkScene>
+    <BigScreen :title="title" :eventList="eventList"></BigScreen>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script setup>
+// import Scene from '@/components/Scene.vue'
+import BigScreen from '@/components/BigScreen.vue'
+import ParkScene from '@/components/ParkScene.vue'
+import { onMounted, ref } from 'vue'
+import {getEventList} from '@/request/api';
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+const title = ref('标题')
+const eventList = ref([])
+
+onMounted(()=>{
+  // getList()
+  // setInterval(()=>{
+  //   getList()
+  // },10000)
+  
+})
+
+
+const getList = async ()=>{
+  let res = await getEventList()
+  eventList.value = res.data.list
 }
 </script>
