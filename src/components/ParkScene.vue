@@ -18,6 +18,10 @@ import { light , dirLight} from '@/three/light'
 import createMesh from "@/three/createMesh";
 import { updateMesh } from "@/three/createMesh";
 
+
+import danceGirl from "@/three/mesh/DanceGirl";
+
+
 import "@/three/init";
 
 let sceneDiv = ref(null)

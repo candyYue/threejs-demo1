@@ -43,9 +43,6 @@ export default class City{
       gltf.cameras.forEach(camera=>{
         CameraModule.addCamera(camera.name, camera);
       })
-
-      console.log(CameraModule)
-
     })
   }
 
@@ -67,6 +64,7 @@ export default class City{
       onUpdate:()=>{
         //设置小汽车方向
         this.redcar.position.copy(
+          //根据弧长在曲线上的位置。必须在范围[0，1]内
           this.toFactoryCurve.getPointAt(this.toFactoryCurveProgress)
         );
 

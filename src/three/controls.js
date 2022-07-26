@@ -34,6 +34,8 @@ class ControlModule{
   }
   setFlyControls(){
     this.controls = new FlyControls(CameraModule.activeCamera,renderer.domElement);//创建控件对象
+    this.controls.autoForward = true;
+    
     this.controls.movementSpeed = 100;
     this.controls.rollSpeed = Math.PI / 60;
   }

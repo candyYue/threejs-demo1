@@ -26,6 +26,9 @@
           <button @click="toggleControl('OrbitControls')">轨道观览</button>
           <button @click="toggleControl('FlyControls')">飞行观览</button>
           <button @click="toggleControl('FirstPersonControls')">第一人称观览</button>
+
+
+          <button @click="focusGirl">focusGirl</button>
         </ul>
     </div>
 </template>
@@ -72,6 +75,10 @@ import eventBus from '@/utils/eventBus'
 
  const toggleControl = (name)=>{
   eventBus.emit('toggleControl', name)
+ }
+
+ const focusGirl = (name)=>{
+  eventBus.emit('focusDance')
  }
 
 

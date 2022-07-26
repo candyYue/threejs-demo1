@@ -6,15 +6,23 @@ import renderer from "./renderer";
 import controlModule from "./controls";
 import scene from "./scene";
 
+import danceGirl from "@/three/mesh/DanceGirl";
 
 const clock = new THREE.Clock();
 function animate(updateMesh, city) {
   const time = clock.getElapsedTime();
   // 获取间隔时间
   const delta = clock.getDelta();
+  
+  // console.log(danceGirl.mixer)
+  // if (danceGirl.mixer) {
+  //   danceGirl.mixer.update(delta);
+  // }
+
   controlModule.controls.update(delta);
   
   updateMesh(delta);
+  
   requestAnimationFrame(()=>{
     animate(updateMesh, city)
   });
