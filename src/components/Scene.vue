@@ -16,7 +16,7 @@ import renderer from '@/three/renderer'
 import axesHelper from '@/three/axesHelper'
 import animate from '@/three/animate'
 
-import createMesh from '@/three/createMesh'
+import {createMesh1} from '@/three/createMesh'
 
 import AlarmSprite from '@/three/mesh/AlarmSprite'
 import LightWall from '@/three/mesh/LightWall'
@@ -95,7 +95,7 @@ scene.add(CameraModule.activeCamera);
 // 添加辅助坐标轴
 scene.add(axesHelper);
 
-createMesh()
+createMesh1()
 
 onMounted(()=>{
   animate()

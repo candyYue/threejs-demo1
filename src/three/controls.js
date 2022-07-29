@@ -17,7 +17,7 @@ import eventBus from '@/utils/eventBus'
 
 class ControlModule{
   constructor(){
-    this.setFlyControls()//默认轨道控制器
+    this.setOrbitControls()//默认轨道控制器
 
     eventBus.on('toggleControl',name=>{
       this[`set${name}`]()
@@ -35,7 +35,7 @@ class ControlModule{
   setFlyControls(){
     this.controls = new FlyControls(CameraModule.activeCamera,renderer.domElement);//创建控件对象
     this.controls.autoForward = true;
-    
+
     this.controls.movementSpeed = 100;
     this.controls.rollSpeed = Math.PI / 60;
   }

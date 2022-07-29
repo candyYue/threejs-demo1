@@ -20,8 +20,7 @@ class DanceGirl{
     gltfLoader.load('model/jianshen1.glb',gltf=>{
       
       scene.add(gltf.scene)
-      this.girlPosition = gltf.scene.position.clone()  
-      console.log(this.girlPosition)
+      this.girlPosition = gltf.scene.position.clone()
       gltf.scene.traverse(child =>{
         if(child.isMesh){
           child.material.depthWrite = true
@@ -47,7 +46,6 @@ class DanceGirl{
         z:this.girlPosition.z,
         duration:1,
         onComplete:()=>{
-          console.log(this.girlPosition)
           gsap.to(CameraModule.activeCamera.position,{
             x:this.girlPosition.x - 1,
             y:this.girlPosition.y - 2,

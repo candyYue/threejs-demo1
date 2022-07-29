@@ -6,11 +6,12 @@ import renderer from "./renderer";
 import controlModule from "./controls";
 import scene from "./scene";
 
-import danceGirl from "@/three/mesh/DanceGirl";
+// import danceGirl from "@/three/mesh/DanceGirl";
 
 const clock = new THREE.Clock();
 function animate(updateMesh, city) {
-  const time = clock.getElapsedTime();
+  // 不能在同一帧里使用
+  // const time = clock.getElapsedTime();
   // 获取间隔时间
   const delta = clock.getDelta();
   
@@ -20,8 +21,9 @@ function animate(updateMesh, city) {
   // }
 
   controlModule.controls.update(delta);
-  
-  updateMesh(delta);
+  if(updateMesh){
+    updateMesh(delta);
+  }
   
   requestAnimationFrame(()=>{
     animate(updateMesh, city)

@@ -1,13 +1,12 @@
 <template>
   <div class="home">
-    <!-- <Scene :eventList="eventList"></Scene> -->
-    <ParkScene></ParkScene>
+    <Scene :eventList="eventList"></Scene>
     <BigScreen :title="title" :eventList="eventList"></BigScreen>
   </div>
 </template>
 
 <script setup>
-// import Scene from '@/components/Scene.vue'
+import Scene from '@/components/Scene.vue'
 import BigScreen from '@/components/BigScreen.vue'
 import ParkScene from '@/components/ParkScene.vue'
 import { onMounted, ref } from 'vue'

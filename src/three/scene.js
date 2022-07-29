@@ -24,4 +24,5 @@ rgbeloader.loadAsync('texture/023.hdr').then(texture=>{
   scene.environment = texture
   scene.background = texture
 })
+
 export default scene

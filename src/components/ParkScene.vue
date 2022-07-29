@@ -15,11 +15,10 @@ import axesHelper from '@/three/axesHelper'
 import animate from '@/three/animate'
 import { light , dirLight} from '@/three/light'
 
-import createMesh from "@/three/createMesh";
-import { updateMesh } from "@/three/createMesh";
+import { createMesh2,updateMesh } from "@/three/createMesh";
 
 
-import danceGirl from "@/three/mesh/DanceGirl";
+// import danceGirl from "@/three/mesh/DanceGirl";
 
 
 import "@/three/init";
@@ -33,7 +32,7 @@ scene.add(CameraModule.activeCamera);
 // 添加辅助坐标轴
 scene.add(axesHelper);
 
-let city = createMesh();
+let city = createMesh2();
 
 onMounted(()=>{
    animate(updateMesh, city);
