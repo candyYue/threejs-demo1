@@ -1,6 +1,6 @@
 // import camera from "./camera";
 import CameraModule from "@/three/camera";
-import renderer from "./renderer";
+import {renderer} from "./renderer";
 
 const camera = CameraModule.activeCamera
 // 更新摄像头

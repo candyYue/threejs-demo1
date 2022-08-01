@@ -1,7 +1,7 @@
 import * as THREE from "three";
 // import camera from "./camera";
 import CameraModule from "@/three/camera";
-import renderer from "./renderer";
+import {renderer} from "./renderer";
 // import controls from "./controls";
 import controlModule from "./controls";
 import scene from "./scene";

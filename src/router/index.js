@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import FlowerView from '../views/FlowerView.vue'
+import FactoryView from '../views/FactoryView.vue'
 
 const routes = [
   // {
@@ -14,7 +15,7 @@ const routes = [
   {
     path: '/',
     name: 'firstpage',
-    component: FlowerView
+    component: FactoryView
   },
   {
     path: '/home',
@@ -33,6 +34,11 @@ const routes = [
     path: '/flower',
     name: 'flower',
     component: FlowerView
+  },
+  {
+    path: '/factory',
+    name: 'factory',
+    component: FactoryView
   },
 ]
 

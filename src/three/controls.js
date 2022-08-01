@@ -3,7 +3,7 @@ import { FlyControls } from "three/examples/jsm/controls/FlyControls";
 import { FirstPersonControls } from "three/examples/jsm/controls/FirstPersonControls";
 // import camera from '@/three/camera'
 import CameraModule from "@/three/camera";
-import renderer from '@/three/renderer'
+import {renderer} from '@/three/renderer'
 import eventBus from '@/utils/eventBus'
 
 

@@ -12,7 +12,7 @@ import * as THREE from 'three';
 import scene from '@/three/scene'
 // import camera from '@/three/camera'
 import CameraModule from "@/three/camera";
-import renderer from '@/three/renderer'
+import {renderer} from '@/three/renderer'
 import axesHelper from '@/three/axesHelper'
 import animate from '@/three/animate'
 

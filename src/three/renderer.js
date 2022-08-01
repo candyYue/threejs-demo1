@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRenderer'
 const renderer = new THREE.WebGLRenderer({
   antialias:true, //抗锯齿
   alpha: true,
@@ -10,4 +11,13 @@ renderer.physicallyCorrectLights = true // 设置物理灯光模拟效果
 renderer.toneMapping = THREE.ACESFilmicToneMapping //电影级别效果
 renderer.toneMappingExposure = 1.5 //曝光程度
 renderer.setSize(window.innerWidth, window.innerHeight)
-export default renderer
+
+
+//创建css3drender
+const css3drender = new CSS3DRenderer()
+css3drender.setSize(window.innerWidth, window.innerHeight)
+document.querySelector('#css3drender').appendChild(css3drender.domElement)
+export {
+  renderer,
+  css3drender
+}
