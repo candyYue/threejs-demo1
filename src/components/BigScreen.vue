@@ -8,6 +8,10 @@
             {{toFixInt(item.number)}}
             {{item.unit}}
           </div> -->
+          <button @click="actionFactory">actionFactory</button>
+          <button @click="creatFightPoint">粒子飞机</button>
+          <button @click="pointsBoom">粒子爆炸</button>
+          <button @click="pointsBack">粒子恢复</button>
         </div>
 
         <ul class="big-screen-content big-screen-content-right">
@@ -86,6 +90,22 @@ eventBus.on('spriteClick',data=>{
   console.log(data)
 })
 
+
+const actionFactory = ()=>{
+  eventBus.emit('showAll')
+}
+
+const creatFightPoint = ()=>{
+  eventBus.emit('creatFightPoint')
+}
+
+const pointsBoom = ()=>{
+  eventBus.emit('pointsBoom')
+}
+
+const pointsBack = ()=>{
+  eventBus.emit('pointsBack')
+}
 </script>
   
 <style lang="less">
@@ -103,6 +123,9 @@ eventBus.on('spriteClick',data=>{
     &-header{
       text-align: center;
       color: #ffffff;
+    }
+    .big-screen-content-left{
+      pointer-events: auto;
     }
     .big-screen-content-left .big-screen-item{
       width: 300px;

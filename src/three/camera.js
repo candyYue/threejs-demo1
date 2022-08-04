@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import eventBus from '@/utils/eventBus'
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,10000)
-camera.position.set(100,100,100)
+camera.position.set(50,50,50)
 camera.lookAt(0,0,0)
 //   更新摄像机的投影矩阵
 camera.updateProjectionMatrix();

@@ -1,6 +1,6 @@
 // import camera from "./camera";
 import CameraModule from "@/three/camera";
-import {renderer} from "./renderer";
+import {renderer,css3drender} from "./renderer";
 
 const camera = CameraModule.activeCamera
 // 更新摄像头
@@ -18,6 +18,7 @@ window.addEventListener("resize", () => {
 
   //   更新渲染器
   renderer.setSize(window.innerWidth, window.innerHeight);
+  css3drender.setSize(window.innerWidth, window.innerHeight);
   //   设置渲染器的像素比例
   renderer.setPixelRatio(window.devicePixelRatio);
 });

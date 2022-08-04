@@ -1,7 +1,7 @@
 import * as THREE from "three";
 // import camera from "./camera";
 import CameraModule from "@/three/camera";
-import {renderer} from "./renderer";
+import {renderer, css3drender} from "./renderer";
 // import controls from "./controls";
 import controlModule from "./controls";
 import scene from "./scene";
@@ -30,6 +30,7 @@ function animate(updateMesh, city) {
   });
   // 使用渲染器渲染相机看这个场景的内容渲染出来
   renderer.render(scene, CameraModule.activeCamera);
+  css3drender.render(scene, CameraModule.activeCamera);
   // renderer.render(scene, camera);
 }
 
